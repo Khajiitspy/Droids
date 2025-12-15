@@ -1,0 +1,6 @@
+@Droids_HostAddress = http://localhost:5192
+
+GET {{Droids_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
