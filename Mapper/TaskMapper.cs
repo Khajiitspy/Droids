@@ -10,6 +10,10 @@ public class TaskMapper : Profile
     {
         CreateMap<TaskItemModel, TaskEntity>().ReverseMap();
         CreateMap<TaskCreateModel, TaskEntity>()
-                .ForMember(dest => dest.Image, opt => opt.Ignore());
+            .ForMember(dest => dest.Image, opt => opt.Ignore());
+        CreateMap<TaskUpdateModel, TaskEntity>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+            .ForMember(dest => dest.Image, opt => opt.Ignore());
     }
 }
+ 
