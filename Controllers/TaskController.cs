@@ -20,7 +20,7 @@ public class TaskController (ITaskService taskService) : ControllerBase
         return Ok(items);
     }
 
-    [HttpPost]
+    [HttpPost()]
     public async Task<IActionResult> Post([FromForm] TaskCreateModel model)
     {
         if (model.Image == null || model.Image.Length == 0)

@@ -184,3 +184,4 @@
 /home/Alice/Documents/Projects/Droids/obj/Debug/net10.0/Droids.genruntimeconfig.cache
 /home/Alice/Documents/Projects/Droids/obj/Debug/net10.0/ref/Droids.dll
 /home/Alice/Documents/Projects/Droids/obj/Debug/net10.0/Droids.sourcelink.json
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/BCrypt.Net-Next.dll

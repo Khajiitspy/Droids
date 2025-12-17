@@ -11,4 +11,5 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<TaskEntity> Tasks { get; set; }
+    public DbSet<UserEntity> Users { get; set; }
 }
