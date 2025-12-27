@@ -185,3 +185,11 @@
 /home/Alice/Documents/Projects/Droids/obj/Debug/net10.0/ref/Droids.dll
 /home/Alice/Documents/Projects/Droids/obj/Debug/net10.0/Droids.sourcelink.json
 /home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/BCrypt.Net-Next.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.Logging.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/Microsoft.IdentityModel.Tokens.dll
+/home/Alice/Documents/Projects/Droids/bin/Debug/net10.0/System.IdentityModel.Tokens.Jwt.dll

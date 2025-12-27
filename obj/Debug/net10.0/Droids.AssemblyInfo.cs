@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Droids")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0274a25db955ecd4fb0f49ea22658e3ff336b1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eee667d6a8e97c8424b60a345925677ea517319e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Droids")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Droids")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

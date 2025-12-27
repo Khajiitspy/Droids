@@ -1,7 +1,6 @@
 using Droids.Interfaces;
 using Droids.Models.Task;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace Droids.Controllers;
 
@@ -23,6 +22,9 @@ public class TaskController (ITaskService taskService) : ControllerBase
     [HttpPost()]
     public async Task<IActionResult> Post([FromForm] TaskCreateModel model)
     {
+        Console.WriteLine($"Name: '{model.Name}'");
+        Console.WriteLine($"Image: {model.Image != null}");
+
         if (model.Image == null || model.Image.Length == 0)
             return BadRequest("Image is required");
 
