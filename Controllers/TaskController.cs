@@ -1,19 +1,20 @@
 using Droids.Interfaces;
-using Droids.Models.Task;
+using Droids.Models.Zadachi;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Droids.Controllers;
 
 [ApiController]
-[Route("api/tasks")]
-public class TaskController (ITaskService taskService) : ControllerBase
+[Route("api/[controller]")]
+[Authorize]
+public class TaskController(ITaskService taskService) : ControllerBase
 {
 
     [HttpGet()]
     public async Task<IActionResult> Get()
     {
         Thread.Sleep(2000);
-
         var items = await taskService.GetAllAsync();
 
         return Ok(items);
@@ -22,15 +23,6 @@ public class TaskController (ITaskService taskService) : ControllerBase
     [HttpPost()]
     public async Task<IActionResult> Post([FromForm] TaskCreateModel model)
     {
-        Console.WriteLine($"Name: '{model.Name}'");
-        Console.WriteLine($"Image: {model.Image != null}");
-
-        if (model.Image == null || model.Image.Length == 0)
-            return BadRequest("Image is required");
-
-        if (string.IsNullOrWhiteSpace(model.Name))
-            return BadRequest("Name is required");
-
         var res = await taskService.CreateTaskAsync(model);
         return Ok(res);
     }
@@ -38,7 +30,7 @@ public class TaskController (ITaskService taskService) : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(long id)
     {
-        var res = await taskService.DeleteTaskAsync(id);
+        var res = await taskService.DeleteZadachyAsync(id);
         if (!res)
         {
             return NotFound();
@@ -67,5 +59,4 @@ public class TaskController (ITaskService taskService) : ControllerBase
         }
         return Ok();
     }
-
 }
