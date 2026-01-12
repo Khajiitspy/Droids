@@ -1,7 +1,7 @@
-using JustDoItApi.Data;
-using JustDoItApi.Entities.Identity;
-using JustDoItApi.Interfaces;
-using JustDoItApi.Services;
+using Droids.Data;
+using Droids.Entities.Identity;
+using Droids.Interfaces;
+using Droids.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
@@ -100,13 +100,13 @@ builder.Services.AddOpenApi(options =>
     });
 });
 
-builder.Services.Configure<FormOptions>(options =>
-{
-    options.ValueCountLimit = int.MaxValue;
-    options.KeyLengthLimit = int.MaxValue;
-    //options.KeyCountLimit = int.MaxValue;   // sometimes useful
-    options.MultipartBodyLengthLimit = 100_000_000; // 100 MB
-});
+//builder.Services.Configure<FormOptions>(options =>
+//{
+//    options.ValueCountLimit = int.MaxValue;
+//    options.KeyLengthLimit = int.MaxValue;
+//    //options.KeyCountLimit = int.MaxValue;   // sometimes useful
+//    options.MultipartBodyLengthLimit = 100_000_000; // 100 MB
+//});
 
 
 var app = builder.Build();

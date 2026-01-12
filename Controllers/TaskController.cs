@@ -11,7 +11,7 @@ namespace Droids.Controllers;
 public class TaskController(ITaskService taskService) : ControllerBase
 {
 
-    [HttpGet()]
+    [HttpGet]
     public async Task<IActionResult> Get()
     {
         Thread.Sleep(2000);
@@ -20,7 +20,8 @@ public class TaskController(ITaskService taskService) : ControllerBase
         return Ok(items);
     }
 
-    [HttpPost()]
+    [HttpPost]
+    [Consumes("multipart/form-data")]
     public async Task<IActionResult> Post([FromForm] TaskCreateModel model)
     {
         var res = await taskService.CreateTaskAsync(model);
@@ -30,7 +31,7 @@ public class TaskController(ITaskService taskService) : ControllerBase
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(long id)
     {
-        var res = await taskService.DeleteZadachyAsync(id);
+        var res = await taskService.DeleteTaskAsync(id);
         if (!res)
         {
             return NotFound();
@@ -49,7 +50,8 @@ public class TaskController(ITaskService taskService) : ControllerBase
         return Ok();
     }
 
-    [HttpPut()]
+    [HttpPut]
+    [Consumes("multipart/form-data")]
     public async Task<IActionResult> Put([FromForm] TaskUpdateModel model)
     {
         var res = await taskService.UpdateTaskAsync(model);
